@@ -28,5 +28,8 @@ def main():
 		main()
 	elif option=="forensic":
 		forensic.forensic_menu()
+	else:
+		main()
 if __name__ == "__main__":
     main()
+
