@@ -17,16 +17,7 @@
 #    Location : India
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
-import os
-from interface import intf
-from interface import forensic
-intf.style()
-def main():
-	option=raw_input('Wff>')
-	if option=="help":
-		intf.help()
-		main()
-	elif option=="forensic":
-		forensic.forensic_menu()
-if __name__ == "__main__":
-    main()
+from core.forensiclib import filter
+def show_dest():
+	x=raw_input("Enter File Path(Ex- ~/abc.cap)")
+	filter.show_all_destination(x)
