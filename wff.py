@@ -20,4 +20,10 @@
 import os
 from interface import intf
 intf.style()
-
+def main():
+	option=raw_input('Wff>')
+	if option=="help":
+		intf.help()
+		main()
+if __name__ == "__main__":
+    main()

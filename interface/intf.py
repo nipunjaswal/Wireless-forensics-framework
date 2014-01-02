@@ -19,3 +19,12 @@ def style():
 	print  "###################################################"
 	print  "###################################################"
 	
+def help():
+	print("Commands         Usage            ")
+	print("========         =====            ")
+	print("help             Display This Menu")
+	print("attacks          Attack Modules   ")
+	print("forensics        Forensics Modules")
+	print("Author           Author Info      ")
+	print("\n")
+
