@@ -17,22 +17,13 @@
 #    Location : India
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
-import os
-import sys
-from interface import intf
-from interface import forensic
-intf.style()
-def main():
-	option=raw_input('Wff>')
-	if option=="help" or option=="h":
-		intf.help()
-		main()
-	elif option=="forensics" or option=="f":
-		forensic.forensic_menu()
-	elif option=="exit" or option=="e":
-		sys.exit(0)
-	else:
-		main()
-if __name__ == "__main__":
-    main()
+################################################################################################################
+from conf import notation
+def set_path():
+	new_path=raw_input("Enter New File Path (Ex- /abc/adc-01.cap):")
+	notation.pack_file=new_path
+def show_path():
+	print "Current File:"
+	print notation.pack_file		
 
+	

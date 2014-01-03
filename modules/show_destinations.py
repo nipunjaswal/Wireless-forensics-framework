@@ -20,6 +20,5 @@
 ################################################################################################################
 from core.forensiclib import filter
 def show_dest():
-	x=raw_input("Enter File Path(Ex- ~/abc.cap)")
-	filter.show_all_destination(x)
+	filter.show_all_destination()
 	
