@@ -18,16 +18,20 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 import os
+import sys
 from interface import intf
 from interface import forensic
+from core.forensiclib import notation 
 intf.style()
 def main():
 	option=raw_input('Wff>')
-	if option=="help":
+	if option=="help" or option=="h":
 		intf.help()
 		main()
-	elif option=="forensic":
+	elif option=="forensics" or option=="f":
 		forensic.forensic_menu()
+	elif option=="exit" or option=="e":
+		sys.exit(0)
 	else:
 		main()
 if __name__ == "__main__":

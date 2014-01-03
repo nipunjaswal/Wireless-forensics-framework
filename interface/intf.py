@@ -20,11 +20,12 @@ def style():
 	print  "###################################################"
 	
 def help():
-	print("Commands         Usage            ")
-	print("========         =====            ")
-	print("help             Display This Menu")
-	print("attacks          Attack Modules   ")
-	print("forensics        Forensics Modules")
-	print("Author           Author Info      ")
+	print("Commands   ShortHand         Usage          ")
+	print("========   =========         =====          ")
+	print("help           h           Display This Menu")
+	print("attacks        a           Attack Modules   ")
+	print("forensics      f           Forensics Modules")
+	print("author         a           Author Info      ")
+	print("exit           e           Exit WFF         ")
 	print("\n")
 
