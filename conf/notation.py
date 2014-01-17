@@ -22,6 +22,6 @@ data="wlan.fc.type==2"
 #Sorting and Unique Functions
 sorts=" -T fields -e wlan.sa | sort | uniq"
 sortd=" -T fields -e wlan.da | sort | uniq"
-sort_source_dest=" -T fields -E separator=, -e wlan.da -e wlan.sa | sort| uniq"
-sort_data_count=" -T fields -E separator=, -e wlan.da -e wlan.sa |sort | uniq -c | sed 's/,//'"
+sort_source_dest=" -T fields -E separator=, -e wlan.sa -e wlan.da | sort| uniq"
+sort_data_count=" -T fields -E separator=, -e wlan.sa -e wlan.da |sort | uniq -c | tr -s ' ' ',' | sed 's/,//'"
 #===========================================

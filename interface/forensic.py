@@ -5,6 +5,7 @@
 # Email : mail@nipunjaswal.info
 import os
 import sys
+from modules import show_high_data
 from modules import show_deauth
 from modules import show_destinations
 from modules import show_associations
@@ -18,12 +19,16 @@ def forensic_menu():
 		print("help                    h          Display This Menu                               ")
 		print("exit                    e          Exit WFF                                        ")
 		print("\n")
-		print("Forensic Command   Short Hand      Usage Information                               ")
-                print("================   ==========      =================                               ")
+		print("Forensic Command   Short Hand      Usage Information Mgmt Frames                   ")
+                print("================   ==========      =============================                   ")
 		print("show dest               sd         Show All Destinations                           ")
 		print("show sourc              ss         Show All Sources                                ")
 		print("show assoc              sa         Show All Clients Who Sent Authentication Request")
 		print("show deauth             sdd        Show All Deauthentications                      ")
+		print("\n")
+		print("Forensic Command   Short Hand      Usage Information Data Frames                   ")
+                print("================   ==========      =============================                   ")
+		print("show data               sdt        Show Data Transmits                             ")
 		print("\n")
 		print("File Options       Short Hand      Usage Information                               ")
 		print("============       ==========      =================                               ")
@@ -49,6 +54,9 @@ def forensic_menu():
 	elif option=="show deauth" or option=="sdd":
 		show_deauth.show_deauth()
 		forensic_menu()
+	elif option=="show data" or option=="sdt":
+                show_high_data.show_high_data()
+                forensic_menu()
 	elif option=="exit" or option=="e":
 		sys.exit(0)
 	else:
