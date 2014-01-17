@@ -25,6 +25,11 @@ def show_all_association_requests():
 	print"Source"+"\t\t\t\t\t\t"+"Destination"
 	print source+"\t\t\t\t"+dest
 	
-
+def show_all_Deauth():
+        command=notation.libc+ " -r "+notation.pack_file+" -R "+notation.deauth + notation.sort_source_dest
+        execute=os.popen(command).read()
+        source,dest=execute.split(",")
+        print"Source"+"\t\t\t\t\t\t"+"Destination"
+        print source+"\t\t\t\t"+dest
 
 	
