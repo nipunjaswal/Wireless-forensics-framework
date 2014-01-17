@@ -14,6 +14,7 @@ pack_file="~/deepak-01.cap"
 #Filter Variables
 authentications="wlan.fc.type_subtype==0x0B"
 associations_req="wlan.fc.type_subtype==0x00"
+deauth="wlan.fc.type_subtype==0x0C"
 #===========================================
 #Sorting and Unique Functions
 sorts=" -T fields -e wlan.sa | sort | uniq"
