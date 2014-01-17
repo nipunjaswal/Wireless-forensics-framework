@@ -39,8 +39,20 @@ def show_all_Deauth():
         	print source+"\t\t====>\t\t"+dest
 		j=j-1
 
-
-		
+def show_high_data():
+	command=notation.libc+ " -r "+notation.pack_file+" -R "+notation.data+notation.sort_data_count
+	execute=os.popen(command). read()
+	line=execute.split("\n")
+	j=len(line)
+	j=j-2
+	print("No.of Packets\tSource\t\t\tDestination")
+	print("=============\t======\t\t\t===========")
+	while(j>=0):
+                k=line[j]
+                bits,source,dest=k.split(",")
+          	print bits+"\t\t"+source+"\t"+dest
+                j=j-1
+	
 
 
 
