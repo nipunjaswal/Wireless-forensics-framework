@@ -5,6 +5,7 @@
 # Email : mail@nipunjaswal.info
 import os
 import sys
+from modules import show_deauth
 from modules import show_destinations
 from modules import show_associations
 from modules import show_sources
@@ -22,6 +23,7 @@ def forensic_menu():
 		print("show dest               sd         Show All Destinations                           ")
 		print("show sourc              ss         Show All Sources                                ")
 		print("show assoc              sa         Show All Clients Who Sent Authentication Request")
+		print("show deauth             sdd        Show All Deauthentications                      ")
 		print("\n")
 		print("File Options       Short Hand      Usage Information                               ")
 		print("============       ==========      =================                               ")
@@ -43,6 +45,9 @@ def forensic_menu():
 		forensic_menu()
 	elif option=="show sourc" or option=="ss":
 		show_sources.show_source()
+		forensic_menu()
+	elif option=="show deauth" or option=="sdd":
+		show_deauth.show_deauth()
 		forensic_menu()
 	elif option=="exit" or option=="e":
 		sys.exit(0)
