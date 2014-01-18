@@ -3,6 +3,7 @@
 # WFF Interface Design
 # Created By Nipun Jaswal
 # Email : mail@nipunjaswal.info
+# Statitics Required Variables
 import os
 #===========================================
 #Cap Infos
