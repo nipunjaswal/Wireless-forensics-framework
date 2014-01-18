@@ -3,6 +3,7 @@
 # WFF Interface Design
 # Created By Nipun Jaswal
 # Email : mail@nipunjaswal.info
+# Statistics Module For Finding Start time End Time And Duration
 from conf import stats
 import os
 import colorama
