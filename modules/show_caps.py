@@ -18,6 +18,7 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
+# Calling Statitistics Modules
 from core.forensiclib import capinfos
 def capinfo():
 	capinfos.capstart()
