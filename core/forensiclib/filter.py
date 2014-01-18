@@ -24,7 +24,6 @@ def show_all_source():
 def show_all_association_requests():
 	command=notation.libc+ " -r "+notation.pack_file+" -R "+notation.associations_req + notation.sort_source_dest
 	execute=os.popen(command).read()
-	print execute
 	source,dest=execute.split(",")
 	print"Source"+"\t\t\t\t\t\t"+"Destination"
 	print source+"\t\t====>\t\t"+dest
