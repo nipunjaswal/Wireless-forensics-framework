@@ -18,7 +18,7 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
-from core.forensiclib import filter
+from core.forensiclib import datalib
 def show_high_data():
-	filter.show_high_data()
+	datalib.show_high_data()
 	
