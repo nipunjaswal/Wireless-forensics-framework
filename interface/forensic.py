@@ -7,7 +7,7 @@ import os
 import sys
 from modules import show_high_data
 from modules import show_caps
-from modules import show_deauth
+from modules import deauth
 from modules import show_destinations
 from modules import show_associations
 from modules import show_sources
@@ -19,6 +19,7 @@ def forensic_menu():
 		print("===============    ==========      =================                               ")
 		print("statistics              s          Display Time,Duration Etc.                      ")
 		print("help                    h          Display This Menu                               ")
+		print("go back                 gb         Previous Menu                                   ")
 		print("exit                    e          Exit WFF                                        ")
 		print("\n")
 		print("Forensic Command   Short Hand      Usage Information Mgmt Frames                   ")
@@ -26,7 +27,7 @@ def forensic_menu():
 		print("show dest               sd         Show All Destinations                           ")
 		print("show sourc              ss         Show All Sources                                ")
 		print("show assoc              sa         Show All Clients Who Sent Authentication Request")
-		print("show deauth             sdd        Show All Deauthentications                      ")
+		print("DeAuth                  D          Deauth Operations                               ")
 		print("\n")
 		print("Forensic Command   Short Hand      Usage Information Data Frames                   ")
                 print("================   ==========      =============================                   ")
@@ -53,15 +54,17 @@ def forensic_menu():
 	elif option=="show sourc" or option=="ss":
 		show_sources.show_source()
 		forensic_menu()
-	elif option=="show deauth" or option=="sdd":
-		show_deauth.show_deauth()
-		forensic_menu()
 	elif option=="show data" or option=="sdt":
                 show_high_data.show_high_data()
                 forensic_menu()
 	elif option=="statistics" or option=="s":
                 show_caps.capinfo()
                 forensic_menu()
+	elif option=="DeAuth" or option=="D":
+		deauth.menu_deauth()
+		forensic_menu()
+	elif option=="go back" or option=="gb":
+		return
 	elif option=="exit" or option=="e":
 		sys.exit(0)
 	else:

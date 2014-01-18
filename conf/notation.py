@@ -23,5 +23,6 @@ data="wlan.fc.type==2"
 sorts=" -T fields -e wlan.sa | sort | uniq"
 sortd=" -T fields -e wlan.da | sort | uniq"
 sort_source_dest=" -T fields -E separator=, -e wlan.sa -e wlan.da | sort| uniq"
-sort_data_count=" -T fields -E separator=, -e wlan.sa -e wlan.da |sort | uniq -c | tr -s ' ' ',' | sed 's/,//'"
+sort_data_count=" -T fields -E separator=, -e wlan.sa -e wlan.da -e |sort | uniq -c | tr -s ' ' ',' | sed 's/,//'"
+sort_deauth_count=" -T fields -E separator=, -e wlan.sa | sort | uniq -c | tr -s ' ' ',' | cut -b 2-"
 #===========================================

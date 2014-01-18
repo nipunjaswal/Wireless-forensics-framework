@@ -29,6 +29,7 @@ def main():
 		main()
 	elif option=="forensics" or option=="f":
 		forensic.forensic_menu()
+		main()
 	elif option=="exit" or option=="e":
 		sys.exit(0)
 	else:
