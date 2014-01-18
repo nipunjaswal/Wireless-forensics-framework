@@ -34,7 +34,7 @@ def forensic_menu():
 		print("\n")
 		print("File Options       Short Hand      Usage Information                               ")
 		print("============       ==========      =================                               ")
-		print("set file                sf         Set File                                        ")
+		print("set file                sf	   Set File                                        ")
 		print("show file               shf        Show File                                       ")
 		print("\n")
 		forensic_menu()
