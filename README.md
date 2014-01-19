@@ -12,11 +12,12 @@ This project will focus on Automated Wireless Penetration Testing and Carrying o
 
 Features:
 [+]Portable
-[+]Fake MAC Detection
+[+]Fake MAC Detection(Added 18/Jan/2014)
 [+]Geo Location
 [+]Automated Detecion
 [+]Added Support for Decryption
 [+]Decryted Data Analysis
+[+]Automated Attacks
 
 Project Start Date: 2/Jan/2014
 
