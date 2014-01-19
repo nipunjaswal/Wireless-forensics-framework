@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 #
 #            --------------------------------------------------
@@ -19,20 +18,29 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
-from core.forensiclib import datalib
-def menu_show_high_data():
-	option=raw_input('Wff:Forensic:Data>')
+# Calling Statitistics Modules
+from core.forensiclib import capinfos
+def menu_capinfo():
+	option=raw_input('Wff:Forensic:Stats>')
         if option=="help" or option=="h":
                 print("MAC SPOOF CHECK    Short Hand      Fake MAC Check Options Menu                     ")
                 print("================   ==========      =============================                   ")
-                print("show data              sdt         Show All Destinations With Fake MAC Detect      ")
-		print("go back                 gb         Previous Menu                                   ")
-                menu_show_high_data()
-	elif option=="show data" or option=="sdt":
-                datalib.show_high_data()
-                menu_show_high_data()
+                print("capst                   cs         Show Capture Start Time                         ")
+                print("capen                   ce         Show Capture End Time                           ")
+		print("capdur                  cd         Show Capture Duration                           ")
+                print("go back                 gb         Previous Menu                                   ")
+		menu_capinfo()
+        elif option=="capst" or option=="cs":
+                capinfos.capstart()
+                menu_capinfo()
+	elif option=="capen" or option=="ce":
+                capinfos.capend()
+                menu_capinfo()
+	elif option=="capdur" or option=="cd":
+		capinfos.capdur()
+		menu_capinfo()
         elif option=="go back" or option=="gb":
                 return
         else:
-                menu_show_high_data()
+                menu_capinfo()
 	

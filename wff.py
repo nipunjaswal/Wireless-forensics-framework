@@ -19,13 +19,13 @@
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 import os
 import sys
-from interface import intf
+from interface import banner
 from interface import forensic
-intf.style()
+banner.style()
 def main():
 	option=raw_input('Wff>')
 	if option=="help" or option=="h":
-		intf.help()
+		banner.help()
 		main()
 	elif option=="forensics" or option=="f":
 		forensic.forensic_menu()

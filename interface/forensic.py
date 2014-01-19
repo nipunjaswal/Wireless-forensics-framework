@@ -6,7 +6,7 @@
 import os
 import sys
 from modules import show_high_data
-from modules import show_caps
+from modules import capinfos
 from modules import deauth
 from modules import assoc
 from modules import fakemac
@@ -16,7 +16,7 @@ def forensic_menu():
 	if option=="help" or option=="h":
 		print("GENERAL COMMANDS	   Short Hand     Usage Information                               ")
 		print("================    ==========     =================                               ")
-		print("statistics              s          Display Time,Duration Etc.                      ")
+		print("Stats                   s          Display Time,Duration Etc.                      ")
 		print("help                    h          Display This Menu                               ")
 		print("go back                 gb         Previous Menu                                   ")
 		print("exit                    e          Exit WFF                                        ")
@@ -27,10 +27,7 @@ def forensic_menu():
 		print("Assoc                   A          Association Operations Menu                     ")
 		print("DeAuth                  D          Deauth Operations Menu                          ")
 		print("FakeMac                 F          Fake MAC Detection Menu                         ")
-		print("\n")
-		print("DATA COMMANDS      Short Hand      Information Related To DATA                     ")
-                print("================   ==========      ===========================                     ")
-		print("show data               sdt        Show Data Transmits                             ")
+		print("Data                    DT         Data Operations Menu                            ")
 		print("\n")
 		print("File Options       Short Hand      Usage Information                               ")
 		print("============       ==========      =================                               ")
@@ -47,11 +44,11 @@ def forensic_menu():
 	elif option=="Assoc" or option=="A":
 		assoc.menu_assoc()
 		forensic_menu()
-	elif option=="show data" or option=="sdt":
-                show_high_data.show_high_data()
+	elif option=="Data" or option=="DT":
+                show_high_data.menu_show_high_data()
                 forensic_menu()
-	elif option=="statistics" or option=="s":
-                show_caps.capinfo()
+	elif option=="stats" or option=="s":
+                capinfos.menu_capinfo()
                 forensic_menu()
 	elif option=="FakeMac" or option=="F":
 		fakemac.menu_fakemac()

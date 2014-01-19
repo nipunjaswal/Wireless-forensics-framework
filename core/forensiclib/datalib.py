@@ -11,7 +11,6 @@ colorama.init()
 def show_high_data():
 	command=notation.libc+ " -r "+notation.pack_file+" -R "+notation.data+notation.sort_data_count
 	execute=os.popen(command). read()
-	print execute
 	line=execute.split("\n")
 	j=len(line)
 	j=j-2
