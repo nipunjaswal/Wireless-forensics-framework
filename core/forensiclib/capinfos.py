@@ -9,10 +9,12 @@ import os
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
+#Finding the Start Time of The Capture
 def capstart():
 	command=stats.cap+stats.start_time
 	execute=os.popen(command).read()
         print(Fore.RED+execute+Style.RESET_ALL)
+#Finding the End time of the Capture
 def capend():
         command=stats.cap+stats.end_time
         execute=os.popen(command).read()

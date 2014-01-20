@@ -11,6 +11,7 @@ cap="capinfos "
 #===========================================
 #Current File Loaded
 pack_file="~/deepak-01.cap"	
+#Capture File Stats
 start_time="-a "+pack_file
 end_time="-e "+pack_file
 duration="-u "+pack_file
