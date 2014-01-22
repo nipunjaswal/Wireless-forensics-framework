@@ -8,13 +8,21 @@ import os
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()                  	
+j='"'
+k='"'
 #Show All Successful Authentication Response Module
 def show_all_association_response():
-        command=notation.libc+ " -r "+notation.pack_file+" -R "+notation.success_auth + notation.sort_auth
+        command=notation.libc+ " -r "+notation.pack_file+" -R "+notation.success_auth+ notation.sort_auth
         execute=os.popen(command).read()
-        source,dest=execute.split(",")
+        line=execute.split("\n")
+        j=len(line)
+        j=j-2
         print"Source"+"\t\t\t\t\t\t"+"Destination"
-        print source+"\t\t====>\t\t"+dest
+        while(j>=0):
+                k=line[j]
+                source,dest,mon,date,year,time=k.split(",")
+                print source+"\t\t====>\t\t"+dest+"\t\t====>"+time
+                j=j-1
 
 
 	
