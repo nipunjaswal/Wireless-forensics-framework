@@ -11,6 +11,7 @@ from modules import deauth
 from modules import assoc
 from modules import fakemac
 from modules import set_file_path 
+from modules import auth
 def forensic_menu():
 	option=raw_input('Wff:Forensic>')
 	if option=="help" or option=="h":
@@ -28,6 +29,7 @@ def forensic_menu():
 		print("DeAuth                  D          Deauth Operations Menu                          ")
 		print("FakeMac                 F          Fake MAC Detection Menu                         ")
 		print("Data                    DT         Data Operations Menu                            ")
+		print("AuTh                    AT         Authentication Operations Menu                  ")
 		print("\n")
 		print("File Options       Short Hand      Usage Information                               ")
 		print("============       ==========      =================                               ")
@@ -55,6 +57,9 @@ def forensic_menu():
 		forensic_menu()
 	elif option=="DeAuth" or option=="D":
 		deauth.menu_deauth()
+		forensic_menu()
+	elif option=="AuTh" or option=="AT":
+		auth.menu_auth()
 		forensic_menu()
 	elif option=="go back" or option=="gb":
 		return
