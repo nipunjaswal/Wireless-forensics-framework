@@ -12,7 +12,7 @@ libc="tshark"
 pack_file="~/deepak-01.cap"	
 #===========================================
 #Filter Variables Mgmt Frames
-success_auth="wlan.fc.type_subtype==0x0B && wlan_mgt.fixed.auth_seq == 0x0002 && wlan_mgt.fixed.status_code==0x0000"
+success_auth="wlan.fc.type_subtype==0x0B && wlan_mgt.fixed.auth_seq == 0x0002 && wlan_mgt.fixed.status_code==0x0000)"
 associations_req="wlan.fc.type_subtype==0x00"
 deauth="wlan.fc.type_subtype==0x0C"
 #==========================================
