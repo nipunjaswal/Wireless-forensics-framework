@@ -20,7 +20,7 @@
 ################################################################################################################
 from core.forensiclib import reconlib
 def menu_recon():
-        option=raw_input('Wff:Forensic:AuTh>')
+        option=raw_input('Wff:Forensic:ReCon>')
         if option=="help" or option=="h":
                 print("General Command     Short Hand      Usage Information                               ")
                 print("===============    ==========      =================                               ")
