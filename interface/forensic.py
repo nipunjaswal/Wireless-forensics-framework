@@ -12,6 +12,7 @@ from modules import assoc
 from modules import fakemac
 from modules import set_file_path 
 from modules import auth
+from modules import recon
 def forensic_menu():
 	option=raw_input('Wff:Forensic>')
 	if option=="help" or option=="h":
@@ -30,6 +31,7 @@ def forensic_menu():
 		print("FakeMac                 F          Fake MAC Detection Menu                         ")
 		print("Data                    DT         Data Operations Menu                            ")
 		print("AuTh                    AT         Authentication Operations Menu                  ")
+		print("ReCon                   R          Reconstruct The Crime Scene                     ")
 		print("\n")
 		print("File Options       Short Hand      Usage Information                               ")
 		print("============       ==========      =================                               ")
@@ -62,6 +64,9 @@ def forensic_menu():
 		auth.menu_auth()
 		forensic_menu()
 	elif option=="go back" or option=="gb":
+		return
+	elif option=="ReCon" or option=="R":
+		recon.menu_recon()
 		return
 	elif option=="exit" or option=="e":
 		sys.exit(0)
