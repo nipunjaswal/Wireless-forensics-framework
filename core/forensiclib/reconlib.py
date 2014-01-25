@@ -9,9 +9,6 @@ import time
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()                  	
-j='"'
-k='"'
-#Show All Successful Authentication Response Module
 def runmod():
         command="tshark -r /root/deepak-01.cap -R "+""" "wlan.fc.type_subtype==0x00||wlan.fc.type_subtype==0x01||wlan.fc.type_subtype==0x04||wlan.fc.type_subtype==0x05||wlan.fc.type_subtype==0x08" """+" -T fields -E separator=, -e frame.number -e wlan.fc.type_subtype -e wlan.sa -e wlan.da| tr -s ' ' ','"
         execute=os.popen(command).read()
