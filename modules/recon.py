@@ -18,7 +18,7 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
-from core.forensiclib import authlib
+from core.forensiclib import reconlib
 def menu_recon():
         option=raw_input('Wff:Forensic:AuTh>')
         if option=="help" or option=="h":
