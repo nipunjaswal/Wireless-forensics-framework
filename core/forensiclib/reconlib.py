@@ -10,7 +10,7 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()                  	
 def runmod():
-        command="tshark -r /root/deepak-01.cap -R "+""" "wlan.fc.type_subtype==0x00||wlan.fc.type_subtype==0x01||wlan.fc.type_subtype==0x04||wlan.fc.type_subtype==0x05||wlan.fc.type_subtype==0x08" """+" -T fields -E separator=, -e frame.number -e wlan.fc.type_subtype -e wlan.sa -e wlan.da| tr -s ' ' ','"
+        command=notation.libc+" -r "+ notation.pack_file +" -R "+ notation.recon_packet+ notation.sort_recon
         execute=os.popen(command).read()
 	line=execute.split("\n")
         j=len(line)
