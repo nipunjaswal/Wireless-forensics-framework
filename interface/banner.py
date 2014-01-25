@@ -19,12 +19,12 @@ def style():
 	print (Back.BLACK + Author + Style.RESET_ALL)
 	
 def help():
-	print("Commands   ShortHand             Usage             ")
-	print("========   =========             =====             ")
-	print("help           h           Display This Menu       ")
-	print("attacks        a           Attack Modules          ")
-	print("forensics      f           Forensics Modules       ")
-	print("author         a           Author Info             ")
-	print("exit           e           Exit WFF                ")
+	print("Commands\t\tUsage")
+	print("========\t\t=====")
+	print Fore.RED+"(h)"+Style.RESET_ALL+"elp\t\t\tDisplay This Menu"
+	print Fore.RED+"(a)"+Style.RESET_ALL+"ttacks\t\tAttack Modules"
+	print Fore.RED+"(f)"+Style.RESET_ALL+"orensics\t\tForensics Modules"
+	print Fore.RED+"(au)"+Style.RESET_ALL+"thor\t\tAuthor Info"
+	print Fore.RED+"(e)"+Style.RESET_ALL+"xit\t\t\tExit WFF"
 	print("\n")
 
