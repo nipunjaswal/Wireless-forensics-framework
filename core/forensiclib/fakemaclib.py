@@ -88,6 +88,12 @@ def show_all_source():
                 j=j-1
 
 
+def mac_check(macaddr):
+	url="http://www.macvendorlookup.com/api/BOKEvPx/"+macaddr
+	response = urllib.urlopen(url)
+	html = response.read()
+	addr=html [:7]
+	return addr
 	
 
 

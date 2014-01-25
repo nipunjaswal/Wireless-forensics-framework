@@ -4,6 +4,7 @@
 # Created By Nipun Jaswal
 # Email : mail@nipunjaswal.info
 from conf import notation
+from core.forensiclib import fakemaclib
 import os
 import time
 import colorama
@@ -18,18 +19,26 @@ def runmod():
 	a=0
        	while(a<=j):
 		k=line[a]
-		no,type,sor,dst=k.split(",")
+		no,type,sor,dst,month,date,year,time=k.split(",")
+		source_mac_check=fakemaclib.mac_check(sor)
+		dest_mac_check=fakemaclib.mac_check(dst)	
 		if(type=="0x08"):
-			print sor+" Sends a Probe Packet to "+dst
+			print source_mac_check+"("+sor+")"+"Sends a Beacon Frame to "+"("+dst+")"+dest_mac_check+ " at "+time
 			a=a+1
-			time.sleep(1)
 		elif(type=="0x00"):
-			print sor+" Sends an Association Request to "+dst
+			print Fore.MAGENTA+source_mac_check+"("+sor+")"+"Sends an Association request to "+"("+dst+")"+dest_mac_check+ " at "+time+Style.RESET_ALL
                 	a=a+1
-			time.sleep(1)
+		elif(type=="0x01"):
+			print source_mac_check+"("+sor+")"+"Sends a Association response to "+"("+dst+")"+dest_mac_check+ " at "+time
+                        a=a+1
+		elif(type=="0x04"):
+                        print source_mac_check+"("+sor+")"+"Sends a Probe request to "+"("+dst+")"+dest_mac_check+ " at "+time
+                        a=a+1
+		elif(type=="0x05"):
+                        print source_mac_check+"("+sor+")"+"Sends a Probe response to "+"("+dst+")"+dest_mac_check+ "at "+time
+                        a=a+1
 		else:
 			a=a+1
-
 
 
 	
