@@ -3,6 +3,9 @@
 # WFF Interface Design
 # Created By Nipun Jaswal
 # Email : mail@nipunjaswal.info
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 import os
 import sys
 from modules import show_high_data
@@ -16,27 +19,26 @@ from modules import recon
 def forensic_menu():
 	option=raw_input('Wff:Forensic>')
 	if option=="help" or option=="h":
-		print("GENERAL COMMANDS	   Short Hand     Usage Information                               ")
-		print("================    ==========     =================                               ")
-		print("Stats                   s          Display Time,Duration Etc.                      ")
-		print("help                    h          Display This Menu                               ")
-		print("go back                 gb         Previous Menu                                   ")
-		print("exit                    e          Exit WFF                                        ")
+		print "GENERAL COMMANDS\t\t\tUsage Information"
+		print "================\t\t\t================="
+		print Fore.RED+"(s)"+Style.RESET_ALL+"tats\t\t\t\t\tDisplay Time,Duration Etc."
+		print Fore.RED+"(h)"+Style.RESET_ALL+"elp\t\t\t\t\tDisplay This Menu"
+		print Fore.RED+"(g)"+Style.RESET_ALL+"o "+Fore.RED+"(b)"+Style.RESET_ALL+"ack\t\t\t\tPrevious Menu"
+		print Fore.RED+"(e)"+Style.RESET_ALL+"xit\t\t\t\t\tExit WFF"
 		print("\n")
+		print "SUB MENU\t\t\t\tComplex Mgmt Frame Operations"
+		print "========\t\t\t\t============================="
+		print Fore.RED+"(A)"+Style.RESET_ALL+"ssoc\t\t\t\t\tAssociation Operations Menu"
+		print Fore.RED+"(D)"+Style.RESET_ALL+"eauth\t\t\t\tDeauth Operations Menu"
+		print Fore.RED+"(F)"+Style.RESET_ALL+"akeMac\t\t\t\tFake MAC Detection Menu"
+		print Fore.RED+"(D)"+Style.RESET_ALL+"a"+Fore.RED+"(T)"+Style.RESET_ALL+"a\t\t\t\tData Operations Menu"
+		print Fore.RED+"(A)"+Style.RESET_ALL+"u"+Fore.RED+"(T)"+Style.RESET_ALL+"h\t\t\t\tAuthentication Operations Menu"
+		print Fore.RED+"(R)"+Style.RESET_ALL+"eCon\t\t\t\t\tReconstruct The Crime Scene"
 		print("\n")
-		print("SUB MENU           Short Hand      Complex Mgmt Frame Operations                   ")
-		print("========           ==========      =============================                   ")
-		print("Assoc                   A          Association Operations Menu                     ")
-		print("DeAuth                  D          Deauth Operations Menu                          ")
-		print("FakeMac                 F          Fake MAC Detection Menu                         ")
-		print("Data                    DT         Data Operations Menu                            ")
-		print("AuTh                    AT         Authentication Operations Menu                  ")
-		print("ReCon                   R          Reconstruct The Crime Scene                     ")
-		print("\n")
-		print("File Options       Short Hand      Usage Information                               ")
-		print("============       ==========      =================                               ")
-		print("set file                sf         Set File                                        ")
-		print("show file               shf        Show File                                       ")
+		print "File Options\t\t\t\tUsage Information"
+		print "============\t\t\t\t================="
+		print Fore.RED+"(s)"+Style.RESET_ALL+"et "+Fore.RED+"(f)"+Style.RESET_ALL+"ile\t\t\t\tSet File"
+		print Fore.RED+"(sh)"+Style.RESET_ALL+"ow "+Fore.RED+"(f)"+Style.RESET_ALL+"ile\t\t\t\t"+"Show File"
 		print("\n")
 		forensic_menu()
 	elif option=="set file"  or option=="sf":
