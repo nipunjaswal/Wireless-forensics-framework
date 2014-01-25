@@ -23,7 +23,6 @@ def help():
 	print("========   =========             =====             ")
 	print("help           h           Display This Menu       ")
 	print("attacks        a           Attack Modules          ")
-	print("re-construct   r           Re-Construct Crime Scene")
 	print("forensics      f           Forensics Modules       ")
 	print("author         a           Author Info             ")
 	print("exit           e           Exit WFF                ")
