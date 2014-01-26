@@ -16,19 +16,20 @@ def show_all_Deauth():
 	line=execute.split("\n")
 	j=len(line)
 	j=j-2
+	print("No.of Packets\t\tSource\t\t\t\t\tDestination")
+        print("=============\t\t======\t\t\t\t\t===========")
 	while(j>=0):
 		k=line[j]
 		num,source,dest=k.split(",")
 		smc=fakemaclib.mac_check(source)
 		dmc=fakemaclib.mac_check(dest)
-		if(smc=="none" or dmc=="none"):
-        		print smc+"("+source+")"+" sent "+ str(num)+" De-Auth Packets to "+"Broadcast"+"("+dest+")"
+		if(dmc=="none" and dest!="ff:ff:ff:ff:ff:ff"):
+        		print(num+"\t\t\t"+source+"\t\t"+dest+"(Suspicious)"+Style.RESET_ALL)
+		elif(dest=="ff:ff:ff:ff:ff:ff"):
+			print(Style.DIM+num+"\t\t\t"+source+"\t\t\t"+dest+"(Broadcast)"+Style.RESET_ALL)
 		else:
-			print smc+"("+source+")"+" sent "+ str(num)+" De-Auth Packets to "+dmc+"("+dest+")"
+			print(Fore.RED+Style.BRIGHT+num+"\t\t\t"+source+"("+smc+")"+"\t\t"+dest+"("+dmc+")"+Style.RESET_ALL)
 		j=j-1
-
-	
-
 
 
 
