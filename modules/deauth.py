@@ -19,13 +19,16 @@
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
 from core.forensiclib import deauthlib
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 def menu_deauth():
-	option=raw_input('Wff:Forensic:DeAuth>')
+	option=raw_input('Wff:'+Fore.RED+'Forensic'+Style.RESET_ALL+':'+Fore.GREEN+'DeAuth'+Style.RESET_ALL+'>')
         if option=="help" or option=="h":
-                print("General Command     Short Hand      Usage Information                               ")
-                print("===============    ==========      =================                               ")
-		print("show trans            sht          Show All Transmissions                          ")
-		print("go back               gb           Previous Menu                                   ")
+                print("General Command\t\t\t\tUsage Information                               ")
+                print("===============\t\t\t\t=================                               ")
+		print Fore.GREEN+"(sh)ow (t)rans\t\t\t\tShow Clients Sending DeAuth Packets"+Style.RESET_ALL
+		print Fore.GREEN+"(g)o back\t\t\t\tPrevious Menu"+Style.RESET_ALL
  		menu_deauth()
         elif option=="show trans" or option=="sht":
                 deauthlib.show_all_Deauth()

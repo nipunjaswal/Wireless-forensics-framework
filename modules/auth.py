@@ -24,7 +24,7 @@ def menu_auth():
         if option=="help" or option=="h":
                 print("General Command     Short Hand      Usage Information                               ")
                 print("===============    ==========      =================                               ")
-                print("show sauth            st           Show All Successful Authentications             ")
+                print("show sauth            st           Show Authentications Requests                   ")
                 print("go back               gb           Previous Menu                                   ")
                 menu_auth()
         elif option=="show sauth" or option=="st":

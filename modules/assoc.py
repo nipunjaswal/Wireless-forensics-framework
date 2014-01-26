@@ -27,8 +27,8 @@ def menu_assoc():
         if option=="help" or option=="h":
                 print("General Command\t\t\t\tUsage Information")
                 print("===============\t\t\t\t=================")
-                print Fore.YELLOW+"(s)"+Style.RESET_ALL+"how "+Fore.YELLOW+"(a)"+Style.RESET_ALL+"ssoc\t\t\t\tShow All Transmissions"
-                print Fore.YELLOW+"(g)"+Style.RESET_ALL+"o "+Fore.YELLOW+"(b)"+Style.RESET_ALL+"ack\t\t\t\tPrevious Menu"
+                print Fore.YELLOW+"(s)how (a)ssoc\t\t\t\tShow All Transmissions"+Style.RESET_ALL
+                print Fore.YELLOW+"(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
                 menu_assoc()
         elif option=="show assoc" or option=="sa":
                 assoclib.show_all_association_requests()

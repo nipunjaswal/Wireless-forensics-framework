@@ -17,11 +17,11 @@ def show_all_association_response():
         line=execute.split("\n")
         j=len(line)
         j=j-2
-        print"Source"+"\t\t\t\t\t\t"+"Destination"
+        print"Source ====> Destination"
         while(j>=0):
                 k=line[j]
                 source,dest,mon,date,year,time=k.split(",")
-                print source+"\t\t====>\t\t"+dest+"\t\t====>"+time
+                print dest+" ====> "+source+" ====> "+time
                 j=j-1
 
 
