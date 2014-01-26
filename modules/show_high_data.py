@@ -20,13 +20,16 @@
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
 from core.forensiclib import datalib
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 def menu_show_high_data():
-	option=raw_input('Wff:Forensic:Data>')
+	option=raw_input('Wff:'+Fore.RED+'Forensic'+Style.RESET_ALL+':'+Fore.BLUE+'Data'+Style.RESET_ALL+'>')
         if option=="help" or option=="h":
-                print("MAC SPOOF CHECK    Short Hand      Fake MAC Check Options Menu                     ")
-                print("================   ==========      =============================                   ")
-                print("show data              sdt         Show All Destinations With Fake MAC Detect      ")
-		print("go back                 gb         Previous Menu                                   ")
+                print "MAC SPOOF CHECK\t\t\t\tFake MAC Check Options Menu"
+                print "================\t\t\t============================="
+                print Fore.BLUE+"(s)how (d)a(t)a\t\t\t\tShow All Destinations With Fake MAC Detect"
+		print "(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
                 menu_show_high_data()
 	elif option=="show data" or option=="sdt":
                 datalib.show_high_data()
