@@ -28,7 +28,7 @@ def forensic_menu():
 		print("\n")
 		print "SUB MENU\t\t\t\tComplex Mgmt Frame Operations"
 		print "========\t\t\t\t============================="
-		print Fore.RED+"(A)"+Style.RESET_ALL+"ssoc\t\t\t\t\tAssociation Operations Menu"
+		print Fore.YELLOW+"(A)"+Style.RESET_ALL+"ssoc\t\t\t\t\tAssociation Operations Menu"
 		print Fore.RED+"(D)"+Style.RESET_ALL+"eauth\t\t\t\tDeauth Operations Menu"
 		print Fore.RED+"(F)"+Style.RESET_ALL+"akeMac\t\t\t\tFake MAC Detection Menu"
 		print Fore.RED+"(D)"+Style.RESET_ALL+"a"+Fore.RED+"(T)"+Style.RESET_ALL+"a\t\t\t\tData Operations Menu"
