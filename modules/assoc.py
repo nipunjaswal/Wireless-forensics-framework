@@ -18,14 +18,17 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 from core.forensiclib import assoclib
 def menu_assoc():
-        option=raw_input('Wff:Forensic:Assoc>')
+        option=raw_input('Wff:'+Fore.RED+'Forensic'+Style.RESET_ALL+':'+Fore.YELLOW+'Assoc'+Style.RESET_ALL+'>')
         if option=="help" or option=="h":
-                print("General Command     Short Hand      Usage Information                               ")
-                print("===============    ==========      =================                               ")
-                print("show assoc            sa          Show All Transmissions                          ")
-                print("go back               gb           Previous Menu                                   ")
+                print("General Command\t\t\t\tUsage Information")
+                print("===============\t\t\t\t=================")
+                print Fore.YELLOW+"(s)"+Style.RESET_ALL+"how "+Fore.YELLOW+"(a)"+Style.RESET_ALL+"ssoc\t\t\t\tShow All Transmissions"
+                print Fore.YELLOW+"(g)"+Style.RESET_ALL+"o "+Fore.YELLOW+"(b)"+Style.RESET_ALL+"ack\t\t\t\tPrevious Menu"
                 menu_assoc()
         elif option=="show assoc" or option=="sa":
                 assoclib.show_all_association_requests()
