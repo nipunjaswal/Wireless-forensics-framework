@@ -17,7 +17,7 @@ from modules import set_file_path
 from modules import auth
 from modules import recon
 def forensic_menu():
-	option=raw_input('Wff:Forensic>')
+	option=raw_input('Wff:'+Fore.RED+'Forensic'+Style.RESET_ALL+'>')
 	if option=="help" or option=="h":
 		print "GENERAL COMMANDS\t\t\tUsage Information"
 		print "================\t\t\t================="
