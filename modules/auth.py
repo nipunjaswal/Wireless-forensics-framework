@@ -25,11 +25,15 @@ def menu_auth():
                 print("General Command     Short Hand      Usage Information                               ")
                 print("===============    ==========      =================                               ")
                 print("show sauth            st           Show Authentications Requests                   ")
+		print("show failed           sf           Show Failed                                     ")
                 print("go back               gb           Previous Menu                                   ")
                 menu_auth()
         elif option=="show sauth" or option=="st":
                 authlib.show_all_association_response()
                 menu_auth()
+	elif option=="show failed" or option=="sf":
+		authlib.show_failed_attempts()
+		menu_auth()
         elif option=="go back" or option=="gb":
                 return
         else:
