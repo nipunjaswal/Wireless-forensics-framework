@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 #
 # WFF Interface Design
@@ -24,12 +25,13 @@ data="wlan.fc.type==2"
 #Sorting and Unique Functions
 sorts=" -T fields -e wlan.sa | sort | uniq"
 sortd=" -T fields -e wlan.da | sort | uniq"
-sort_auth_deauth="-T fields -E separator=, -e wlan.sa -e wlan.da -e wlan.fc.type_subtype | tr -s ' ' ','"
+sort_auth_deauth=" -T fields -E separator=, -e wlan.sa -e wlan.da -e wlan.fc.type_subtype -e frame.number -e frame.time | tr -s ' ' ','"
 sort_auth=" -T fields -E separator=, -e wlan.sa -e wlan.da -e frame.time| tr -s ' ' ','"
 sort_source_dest=" -T fields -E separator=, -e wlan.sa -e wlan.da | sort| uniq"
 sort_deauth=" -T fields -E separator=, -e wlan.sa -e wlan.da| sort | uniq -c | tr -s ' ' ',' | sed 's/^,*//g'"
 sort_data_count=" -T fields -E separator=, wlan.sa -e wlan.da -e | sort | uniq -c | tr -s ' ' ',' | sed 's/,//'"
 sort_recon=" -T fields -E separator=, -e frame.number -e wlan.fc.type_subtype -e wlan.sa -e wlan.da -e frame.time| tr -s ' ' ','"
+frame=" -T fields -e wlan_mgt.fixed.reason_code | tr -s ' ' ','"
 #===========================================
 
 
