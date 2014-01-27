@@ -10,7 +10,7 @@ import os
 libc="tshark"
 #===========================================
 #Current File Loaded
-pack_file="~/hax.cap"	
+pack_file="/root/hax.cap"	
 #===========================================
 #Filter Variables Mgmt Frames
 success_auth=""" "wlan.fc.type_subtype==0x0B && wlan_mgt.fixed.auth_seq == 0x0002 && wlan_mgt.fixed.status_code==0x0000" """
