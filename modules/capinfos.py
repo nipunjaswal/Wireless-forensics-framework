@@ -19,16 +19,19 @@
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
 # Calling Statitistics Modules
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 from core.forensiclib import capinfos
 def menu_capinfo():
-	option=raw_input('Wff:Forensic:Stats>')
+	option=raw_input('Wff:'+Fore.RED+'forensic'+Style.RESET_ALL+':'+Fore.RED+'stats'+Style.RESET_ALL+'>')
         if option=="help" or option=="h":
-                print("MAC SPOOF CHECK    Short Hand      Fake MAC Check Options Menu                     ")
-                print("================   ==========      =============================                   ")
-                print("capst                   cs         Show Capture Start Time                         ")
-                print("capen                   ce         Show Capture End Time                           ")
-		print("capdur                  cd         Show Capture Duration                           ")
-                print("go back                 gb         Previous Menu                                   ")
+                print "MAC SPOOF CHECK\t\t\t\tFake MAC Check Options Menu"
+                print "================\t\t\t============================="
+                print Fore.RED+"(c)ap(s)t\t\t\t\tShow Capture Start Time"
+                print "(c)ap(e)n\t\t\t\tShow Capture End Time"
+		print "(c)ap(d)ur\t\t\t\tShow Capture Duration"
+                print "(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
 		menu_capinfo()
         elif option=="capst" or option=="cs":
                 capinfos.capstart()
