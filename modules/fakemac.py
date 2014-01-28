@@ -19,19 +19,22 @@
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
 from core.forensiclib import fakemaclib
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 def menu_fakemac():
-        option=raw_input('Wff:Forensic:FakeMac>')
+        option=raw_input('Wff:'+Fore.RED+'Forensic'+Style.RESET_ALL+':'+Fore.CYAN+'FakeMAC'+Style.RESET_ALL+'>')
         if option=="help" or option=="h":
-                print("MAC SPOOF CHECK    Short Hand      Fake MAC Check Options Menu                     ")
-                print("================   ==========      =============================                   ")
-                print("show dest mac           sd         Show All Destinations With Fake MAC Detect      ")
-                print("show sourc mac          ss         Show All Sources With Fake MAC Detect           ")
-		print("go back                 gb         Previous Menu                                   ")
+                print "MAC SPOOF CHECK\t\t\t\tFake MAC Check Options Menu"
+                print "================\t\t\t==========================="
+                print Fore.CYAN+"(s)how (d)est (m)ac\t\t\tShow All Destinations With Fake MAC Detect"
+                print "(s)how (s)ourc (m)ac\t\t\tShow All Sources With Fake MAC Detect"
+		print "(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
                 menu_fakemac()
-        elif option=="show dest mac" or option=="sd":
+        elif option=="show dest mac" or option=="sdm":
                 fakemaclib.show_all_destination()
                 menu_fakemac()
-	elif option=="show sourc mac" or option=="ss":
+	elif option=="show sourc mac" or option=="ssm":
                 fakemaclib.show_all_source()
                 menu_fakemac()
         elif option=="go back" or option=="gb":
