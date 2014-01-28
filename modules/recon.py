@@ -20,14 +20,14 @@
 ################################################################################################################
 from core.forensiclib import reconlib
 def menu_recon():
-        option=raw_input('Wff:Forensic:ReCon>')
+        option=raw_input('Wff:Forensic:Recon>')
         if option=="help" or option=="h":
-                print("General Command     Short Hand      Usage Information                               ")
-                print("===============    ==========      =================                               ")
-                print("run                   rn           Show All Successful Authentications             ")
-                print("go back               gb           Previous Menu                                   ")
+                print "General Command\t\t\t\tUsage Information"
+                print "===============\t\t\t\t================="
+                print "(r)un\t\t\t\t\tShow All Successful Authentications"
+                print "(g)o (b)ack\t\t\t\tPrevious Menu"
                 menu_recon()
-        elif option=="run" or option=="rn":
+        elif option=="run" or option=="r":
                 reconlib.runmod()
                 menu_recon()
         elif option=="go back" or option=="gb":
