@@ -18,17 +18,20 @@
 #    Email : mail@nipunjaswal.info
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 from core.forensiclib import authlib
 def menu_auth():
-        option=raw_input('Wff:Forensic:AuTh>')
+        option=raw_input('Wff:'+Fore.RED+'Forensic'+Style.RESET_ALL+':'+Fore.MAGENTA+'AuTh'+Style.RESET_ALL+'>')
         if option=="help" or option=="h":
-                print("General Command     Short Hand      Usage Information                               ")
-                print("===============    ==========      =================                               ")
-                print("show sauth            st           Show Authentications Requests                   ")
-		print("show failed           sf           Show Failed                                     ")
-                print("go back               gb           Previous Menu                                   ")
+                print "General Command\t\t\t\tUsage Information"
+                print "===============\t\t\t\t================="
+                print Fore.MAGENTA+"(s)how (sa)uth\t\t\t\tShow Authentications Requests"
+		print "(s)how (f)ailed\t\t\t\tShow Failed Authentication Tries"
+                print "(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
                 menu_auth()
-        elif option=="show sauth" or option=="st":
+        elif option=="show sauth" or option=="ssa":
                 authlib.show_all_association_response()
                 menu_auth()
 	elif option=="show failed" or option=="sf":
