@@ -19,12 +19,11 @@ def style():
 	print (Back.BLACK + Author + Style.RESET_ALL)
 	
 def help():
-	print("Commands\t\tUsage")
-	print("========\t\t=====")
-	print Fore.RED+"(h)"+Style.RESET_ALL+"elp\t\t\tDisplay This Menu"
-	print Fore.RED+"(a)"+Style.RESET_ALL+"ttacks\t\tAttack Modules"
-	print Fore.RED+"(f)"+Style.RESET_ALL+"orensics\t\tForensics Modules"
-	print Fore.RED+"(au)"+Style.RESET_ALL+"thor\t\tAuthor Info"
-	print Fore.RED+"(e)"+Style.RESET_ALL+"xit\t\t\tExit WFF"
+	print("Commands\t\t\t\tUsage")
+	print("========\t\t\t\t=====")
+	print Fore.GREEN+"(h)"+Style.RESET_ALL+"elp\t\t\t\t\tDisplay This Menu"
+	print Fore.RED+"(f)"+Style.RESET_ALL+"orensics\t\t\t\tForensics Modules"
+	print Fore.CYAN+"(au)"+Style.RESET_ALL+"thor\t\t\t\tAuthor Info"
+	print Fore.BLUE+"(e)"+Style.RESET_ALL+"xit\t\t\t\t\tExit WFF"
 	print("\n")
 
