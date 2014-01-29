@@ -69,7 +69,7 @@ def forensic_menu():
 		return
 	elif option=="ReCon" or option=="R":
 		recon.menu_recon()
-		return
+		forensic_menu()
 	elif option=="exit" or option=="e":
 		sys.exit(0)
 	else:
