@@ -23,6 +23,7 @@ def show_high_data():
 	while(a>=0):
 		b=line[a]
 		bits1,source1,dest1=b.split(",")
+		#Match With the Broadcast Addresses and Multicast Addresses
 		if(source1=="01:00:5e:00:00:01" or source1=="01:00:5e:00:00:02" or source1=="01:00:5e:00:00:01" or source1=="33:33:00:00:00:fb" or source1=="33:33:00:00:00:02" or source1=="33:33:00:00:00:01" or source1=="01:00:5e:00:00:fb" or source1=="01:00:5e:7f:ff:fa"):
                 	print(Style.DIM+bits1+"\t\t"+dest1+"\t\t"+source1+"(MultiCast)"+Style.RESET_ALL)
 		elif(source1=="ff:ff:ff:ff:ff:ff"):
