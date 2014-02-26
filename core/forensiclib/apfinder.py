@@ -11,8 +11,8 @@ import time
 from colorama import Fore, Back, Style
 colorama.init()
 def findap():
-	ap='""" "DLinkVWR" """'
-	command=notation.find+apval
+	va=""" "DLinkVWR" """
+	command=notation.find+va
 	print command
 	k=100
 	while(int(k)>10):
