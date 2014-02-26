@@ -19,17 +19,22 @@
 #    Blog : www.nipunjaswal.com, www.nipunjaswal.info
 ################################################################################################################
 from core.forensiclib import reconlib
+from core.forensiclib import apfinder
 def menu_recon():
         option=raw_input('Wff:Forensic:Recon>')
         if option=="help" or option=="h":
                 print "General Command\t\t\t\tUsage Information"
                 print "===============\t\t\t\t================="
                 print "(r)un\t\t\t\t\tShow All Successful Authentications"
+		print "(a)p\t\t\t\t\tAP Finder"
                 print "(g)o (b)ack\t\t\t\tPrevious Menu"
                 menu_recon()
         elif option=="run" or option=="r":
                 reconlib.runmod()
                 menu_recon()
+	elif option=="ap" or option=="a":
+		apfinder.findap()
+		menu_recon()
         elif option=="go back" or option=="gb":
                 return
         else:

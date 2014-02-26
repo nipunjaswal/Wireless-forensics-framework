@@ -21,6 +21,7 @@ def forensic_menu():
 	if option=="help" or option=="h":
 		print "GENERAL COMMANDS\t\t\tUsage Information"
 		print "================\t\t\t================="
+		print Fore.YELLOW+"(a)"+Style.RESET_ALL+"p"+Fore.YELLOW+"(f)"+Style.RESET_ALL+"inder\t\t\t\t AP Finder Module" 
 		print Fore.RED+"(s)"+Style.RESET_ALL+"tats\t\t\t\t\tDisplay Time,Duration Etc."
 		print Fore.GREEN+"(h)"+Style.RESET_ALL+"elp\t\t\t\t\tDisplay This Menu"
 		print Fore.BLACK+"(g)"+Style.RESET_ALL+"o "+Fore.BLACK+"(b)"+Style.RESET_ALL+"ack\t\t\t\tPrevious Menu"
@@ -68,6 +69,9 @@ def forensic_menu():
 	elif option=="go back" or option=="gb":
 		return
 	elif option=="ReCon" or option=="R":
+		recon.menu_recon()
+		forensic_menu()
+	elif option=="ap finder" or option=="af":
 		recon.menu_recon()
 		forensic_menu()
 	elif option=="exit" or option=="e":
