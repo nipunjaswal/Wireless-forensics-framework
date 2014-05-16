@@ -21,7 +21,7 @@ def forensic_menu():
 	if option=="help" or option=="h":
 		print "GENERAL COMMANDS\t\t\tUsage Information"
 		print "================\t\t\t================="
-		print Fore.YELLOW+"(a)"+Style.RESET_ALL+"p"+Fore.YELLOW+"(f)"+Style.RESET_ALL+"inder\t\t\t\t AP Finder Module" 
+		print Fore.YELLOW+"(a)"+Style.RESET_ALL+"p"+Fore.YELLOW+"(f)"+Style.RESET_ALL+"inder\t\t\t\tAP Finder Module" 
 		print Fore.RED+"(s)"+Style.RESET_ALL+"tats\t\t\t\t\tDisplay Time,Duration Etc."
 		print Fore.GREEN+"(h)"+Style.RESET_ALL+"elp\t\t\t\t\tDisplay This Menu"
 		print Fore.BLACK+"(g)"+Style.RESET_ALL+"o "+Fore.BLACK+"(b)"+Style.RESET_ALL+"ack\t\t\t\tPrevious Menu"
@@ -34,7 +34,6 @@ def forensic_menu():
 		print Fore.CYAN+"(F)"+Style.RESET_ALL+"akeMac\t\t\t\tFake MAC Detection Menu"
 		print Fore.BLUE+"(D)"+Style.RESET_ALL+"a"+Fore.BLUE+"(T)"+Style.RESET_ALL+"a\t\t\t\tData Operations Menu"
 		print Fore.MAGENTA+"(A)"+Style.RESET_ALL+"u"+Fore.MAGENTA+"(T)"+Style.RESET_ALL+"h\t\t\t\tAuthentication Operations Menu"
-		#print Fore.BLACK+"(R)"+Style.RESET_ALL+"eCon\t\t\t\t\tReconstruct The Crime Scene"
 		print("\n")
 		print "File Options\t\t\t\tUsage Information"
 		print "============\t\t\t\t================="

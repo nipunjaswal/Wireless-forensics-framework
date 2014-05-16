@@ -11,9 +11,8 @@ import time
 from colorama import Fore, Back, Style
 colorama.init()
 def findap():
-	va=""" "Deadly Virus" """
+	va=raw_input("Enter The Name of Network(Example- DLinkVWR):")
 	command=notation.find+va
-	print command
 	k=100
 	while(int(k)>10):
 		yo=os.popen(command).read()
@@ -30,8 +29,7 @@ def findap():
 		high=10
 		med=25
 		low=50
-		#Finding the AP
-		print k 
+		#Finding the AP 
 		if(int(k)<=int(high)):
 			print("Router Within 5 Feet")
 			break

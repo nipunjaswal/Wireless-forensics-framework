@@ -31,7 +31,8 @@ def menu_capinfo():
                 print Fore.RED+"(c)ap(s)t\t\t\t\tShow Capture Start Time"
                 print "(c)ap(e)n\t\t\t\tShow Capture End Time"
 		print "(c)ap(d)ur\t\t\t\tShow Capture Duration"
-                print "(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
+                print "(n)etwork(n)(a)me\t\t\t\tNetwork Name and Address"
+		print "(g)o (b)ack\t\t\t\tPrevious Menu"+Style.RESET_ALL
 		menu_capinfo()
         elif option=="capst" or option=="cs":
                 capinfos.capstart()
@@ -41,6 +42,9 @@ def menu_capinfo():
                 menu_capinfo()
 	elif option=="capdur" or option=="cd":
 		capinfos.capdur()
+		menu_capinfo()
+	elif option=="nna":
+		capinfos.capnna()
 		menu_capinfo()
         elif option=="go back" or option=="gb":
                 return

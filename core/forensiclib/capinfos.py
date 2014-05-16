@@ -24,5 +24,20 @@ def capdur():
         execute=os.popen(command).read()
         print(Fore.BLUE+execute+Style.RESET_ALL)	
 
+def capnna():
+	command=stats.nna
+	execute=os.popen(command).read()
+	line=execute.split("\n")
+        j=len(line)
+        j=j-2
+        while(j>=0):
+                k=line[j]
+                source,mac=k.split(",")
+                print"MAC"+"\t\t\t\t\t\t"+"NAME"
+		print"==="+"\t\t\t\t\t\t"+"===="
+                print Fore.GREEN
+                print source+"\t\t\t\t"+mac
+                print Style.RESET_ALL
+                j=j-1
 
 	

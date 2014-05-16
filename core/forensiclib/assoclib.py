@@ -15,9 +15,18 @@ def show_all_association_requests():
         if(execute==""):
 		print "No Associations Found"
 	else:
-		source,dest=execute.split(",")
-        	print"Source"+"\t\t\t\t\t\t"+"Destination"
-        	print source+"\t\t====>\t\t"+dest
+		line=execute.split("\n")
+        	j=len(line)
+        	j=j-2
+        	print "Source"+"\t\t\t\t====>\t\t"+"Destination"
+        	while(j>=0):
+                	k=line[j]
+                	source,dest=k.split(",")
+                	print Fore.GREEN
+                	print source+"\t\t====>\t\t"+dest
+                	print Style.RESET_ALL
+                	j=j-1
+
 
 
 	
