@@ -34,7 +34,7 @@ def forensic_menu():
 		print Fore.CYAN+"(F)"+Style.RESET_ALL+"akeMac\t\t\t\tFake MAC Detection Menu"
 		print Fore.BLUE+"(D)"+Style.RESET_ALL+"a"+Fore.BLUE+"(T)"+Style.RESET_ALL+"a\t\t\t\tData Operations Menu"
 		print Fore.MAGENTA+"(A)"+Style.RESET_ALL+"u"+Fore.MAGENTA+"(T)"+Style.RESET_ALL+"h\t\t\t\tAuthentication Operations Menu"
-		print Fore.BLACK+"(R)"+Style.RESET_ALL+"eCon\t\t\t\t\tReconstruct The Crime Scene"
+		#print Fore.BLACK+"(R)"+Style.RESET_ALL+"eCon\t\t\t\t\tReconstruct The Crime Scene"
 		print("\n")
 		print "File Options\t\t\t\tUsage Information"
 		print "============\t\t\t\t================="

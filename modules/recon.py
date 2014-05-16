@@ -21,11 +21,11 @@
 from core.forensiclib import reconlib
 from core.forensiclib import apfinder
 def menu_recon():
-        option=raw_input('Wff:Forensic:Recon>')
+        option=raw_input('Wff:Forensic:APFinder>')
         if option=="help" or option=="h":
                 print "General Command\t\t\t\tUsage Information"
                 print "===============\t\t\t\t================="
-                print "(r)un\t\t\t\t\tShow All Successful Authentications"
+                print "(r)econ\t\t\t\t\tReconstruct the Crime Scene"
 		print "(a)p\t\t\t\t\tAP Finder"
                 print "(g)o (b)ack\t\t\t\tPrevious Menu"
                 menu_recon()
