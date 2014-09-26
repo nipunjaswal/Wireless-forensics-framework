@@ -9,7 +9,7 @@ from colorama import Fore, Back, Style
 colorama.init()
 def style():
 	Name=   "#Wireless Forensics Framework 0.2v#"
-	Author= "#  Developer: Nipun Jaswal(Ap3x)  #"
+	Author= "#  Developer: Nipun Jaswal  #"
 	print(Fore.RED+"\\\              //===== ||=======   ")
 	print(Fore.RED+" \\\            //       ||        ")
 	print(Fore.RED+"  \\\   //\\\   //======= ||=======  ")
