@@ -8,7 +8,7 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 def style():
-	Name=   "#Wireless Forensics Framework 0.1v#"
+	Name=   "#Wireless Forensics Framework 0.2v#"
 	Author= "#  Developer: Nipun Jaswal(Ap3x)  #"
 	print(Fore.RED+"\\\              //===== ||=======   ")
 	print(Fore.RED+" \\\            //       ||        ")
